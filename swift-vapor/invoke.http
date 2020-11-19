@@ -1,0 +1,10 @@
+
+GET http://localhost:8080/health
+
+###
+
+GET http://localhost:8080/tracks/test_key_path
+
+###
+
+GET http://localhost:8080/tracks/not_found

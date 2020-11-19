@@ -1,0 +1,25 @@
+
+GET http://localhost:8080/32/thing/index.html
+
+###
+
+GET http://localhost:8080/health
+
+###
+
+GET http://localhost:8080/features/abc
+
+###
+
+GET http://localhost:8080/not_found
+
+###
+
+GET http://localhost:8080/tracks/is_this_here
+
+###
+
+GET http://localhost:8080/tracks/test_key_path
+Content-Type: application/json
+X-Request-ID: {{$guid}}
+X-Client-ID: {{$guid}}

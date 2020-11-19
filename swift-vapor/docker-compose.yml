@@ -1,0 +1,18 @@
+version: '3.3'
+
+# $: mycli -h localhost -p 3306 -u user -p pass -D db
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    volumes:
+      - .docker/mysql:/docker-entrypoint-initdb.d/
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+      MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
